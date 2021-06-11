@@ -1,8 +1,30 @@
+.post {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+    max-width: 72rem;
+    margin: 0px auto auto auto;
+}
+
+.post-header {
+  grid-area: header;
+}
+
 .post-title {
   color: $lightest-color;
 }
 
+.post-meta {
+  font-size: 0.8em;
+}
+
 .post-content {
+  grid-area: main;
+
   & > pre,
   .highlight {
     margin: 1em 0;
@@ -15,11 +37,40 @@
     padding: .5em 1em;
   }
 
+  h2 {
+    border-bottom: 1px solid DimGray;
+  }
+
   img {
     max-width: 100%;
   }
 }
 
-.post-meta {
-  font-size: 0.8em;
+.post-aside {
+  grid-area: aside;
+}
+
+.post-toc {
+  top: 3em;
+  position: sticky;
+  margin: 2em;
+  padding: 0 0.5em 0 0.5em;
+  border-left: 1px dashed DimGray;
+}
+
+.post-footer {
+  grid-area: footer;
+}
+
+@media (max-width: 960px) {
+  .post {
+    display: block;
+  }
+  .post-header {
+  }
+  .post-content {
+  }
+  .post-aside {
+    display: none;
+  }
 }

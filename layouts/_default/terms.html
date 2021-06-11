@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <article>
+  <section>
     <h1>{{ .Title }}</h1>
     <ul class="tags-list">
       {{ range .Data.Terms.ByCount }}
@@ -12,5 +12,5 @@
         </li>
       {{ end }}
     </ul>
-  </article>
+  </section>
 {{ end }}

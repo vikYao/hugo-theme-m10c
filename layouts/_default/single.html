@@ -28,6 +28,16 @@
     <div class="post-content">
       {{ .Content }}
     </div>
+    <aside class="post-aside">
+      {{ if and (gt .WordCount 0 ) (default true .Params.toc) }}
+         <div class="post-toc">
+           <header>
+             <p>目录：<p>
+            </header>
+           {{ .TableOfContents }}
+         </div>
+      {{ end }}
+    </aside>
     <div class="post-footer">
       {{ template "_internal/disqus.html" . }}
     </div>

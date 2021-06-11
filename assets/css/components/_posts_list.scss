@@ -1,5 +1,7 @@
 .posts-list {
   padding: 0;
+  max-width: 72rem;
+  margin: 0px auto auto auto;
 }
 
 .posts-list-item {
@@ -14,4 +16,12 @@
 .posts-list-item-description {
   display: block;
   font-size: 0.8em;
+}
+
+section {
+  h1 {
+      max-width: 72rem;
+      margin-left: auto;
+      margin-right: auto;
+  }
 }
