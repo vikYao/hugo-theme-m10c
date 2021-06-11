@@ -33,7 +33,7 @@
   & > pre,
   .highlight > pre,
   .highlight > div {
-    border-left: 0.4em solid rgba($primary-color, .8);
+    //border-left: 0.4em solid rgba($primary-color, .8);
     padding: .5em 1em;
   }
 
@@ -41,8 +41,32 @@
     border-bottom: 1px solid DimGray;
   }
 
+  // 默认居中对齐，左对齐、右对齐需在markdown中后缀#floatleft、#floatright
   img {
     max-width: 100%;
+    display: block;
+    margin: 0.7rem auto;
+  }
+
+  img[src$='#floatleft'] {
+    float:left;
+    margin: 0.7rem;
+  }
+
+  img[src$='#floatright'] {
+    float:right;
+    margin: 0.7rem;
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0 1em;
+    border-left: 0.25em solid rgba($primary-color, .8);
+    color: rgba($light-color, .7);
+  }
+
+  strong {
+    color: rgba(#fff, .9);
   }
 }
 
