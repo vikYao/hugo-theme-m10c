@@ -33,7 +33,7 @@
   & > pre,
   .highlight > pre,
   .highlight > div {
-    border-left: 0.4em solid rgba($primary-color, .8);
+    //border-left: 0.4em solid rgba($primary-color, .8);
     padding: .5em 1em;
   }
 
@@ -56,6 +56,17 @@
   img[src$='#floatright'] {
     float:right;
     margin: 0.7rem;
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0 1em;
+    border-left: 0.25em solid rgba($primary-color, .8);
+    color: rgba($light-color, .7);
+  }
+
+  strong {
+    color: rgba(#fff, .9);
   }
 }
 
