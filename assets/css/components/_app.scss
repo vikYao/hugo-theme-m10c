@@ -11,6 +11,15 @@
   border: 0.5rem solid $primary-color;
 }
 
+.app-header-sidebar {
+  padding-left: 0;
+  list-style: none;
+}
+
+.app-header-sidebar-item {
+  font-size: 1.3em;
+}
+
 .app-container {
   padding: 2.5rem;
 }
