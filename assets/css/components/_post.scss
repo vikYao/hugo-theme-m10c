@@ -68,6 +68,25 @@
   strong {
     color: rgba(#fff, .9);
   }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid DimGray;
+    width: 100%;
+    max-width: 100%;
+
+    th, td {
+      border: 1px solid DimGray;
+      text-align: left;
+      padding: 0.25rem 1rem;
+    }
+
+    th {
+      // text-align: center;
+      color: $primary-color;
+    }
+  }
 }
 
 .post-aside {
