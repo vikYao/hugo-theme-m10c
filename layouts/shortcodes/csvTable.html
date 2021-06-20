@@ -1,0 +1,52 @@
+{{ $url := .Get 0 }}
+{{ $sep := "," }}
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>标题</th>
+      <th>年份</th>
+      <th>媒体源</th>
+      <th>分辨率</th>
+      <th>封装类型</th>
+      <th>大小</th>
+      <th>路径</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $i, $r := getCSV $sep $url }}
+    <tr>
+      <td>{{ index $r 0 }}</td>
+      <td>{{ index $r 1 }}</td>
+      <td>{{ index $r 2 }}</td>
+      <td>{{ index $r 3 }}</td>
+      <td>{{ index $r 4 }}</td>
+      <td>{{ index $r 5 }}</td>
+      <td>{{ index $r 6 }}</td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table> -->
+
+<table>
+  {{ range $i, $r := getCSV $sep $url }}
+  <thead>
+    {{ if eq $i 0 }}
+    <tr>
+      {{ range $r }}
+      <th>{{ . }}</th>
+      {{ end }}
+    </tr>
+    {{ end }}
+  </thead>
+  <tbody>
+    {{ if ge $i 1 }}
+    <tr>
+      {{ range $r }}
+      <td>{{ . }}</td>
+      {{ end }}
+    </tr>
+    {{ end }}
+  </tbody>
+  {{ end }}
+</table>
