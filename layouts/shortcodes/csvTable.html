@@ -28,25 +28,27 @@
   </tbody>
 </table> -->
 
-<table>
-  {{ range $i, $r := getCSV $sep $url }}
-  <thead>
-    {{ if eq $i 0 }}
-    <tr>
-      {{ range $r }}
-      <th>{{ . }}</th>
+<div style="overflow-x: auto;">
+  <table>
+    {{ range $i, $r := getCSV $sep $url }}
+    <thead>
+      {{ if eq $i 0 }}
+      <tr>
+        {{ range $r }}
+        <th>{{ . }}</th>
+        {{ end }}
+      </tr>
       {{ end }}
-    </tr>
-    {{ end }}
-  </thead>
-  <tbody>
-    {{ if ge $i 1 }}
-    <tr>
-      {{ range $r }}
-      <td>{{ . }}</td>
+    </thead>
+    <tbody>
+      {{ if ge $i 1 }}
+      <tr>
+        {{ range $r }}
+        <td>{{ . }}</td>
+        {{ end }}
+      </tr>
       {{ end }}
-    </tr>
+    </tbody>
     {{ end }}
-  </tbody>
-  {{ end }}
-</table>
+  </table>
+</div>
